@@ -1,0 +1,7 @@
+<p>parent works!</p>
+<div>message from the child: {{ fromChild }}</div>
+<app-child
+  [dataFromParent]="message"
+  (customEvent)="fromChild = $event"
+></app-child>
+<h1 #viewChild>Hello fromViewChild!</h1>

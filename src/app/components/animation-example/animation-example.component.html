@@ -1,0 +1,7 @@
+<div class="container">
+  <button (click)="toggleAnimation()">Toggle Animation</button>
+
+  <div [@animateMe]="state" *ngIf="state === 'initial' || state === 'final'">
+    Angular Animation Example
+  </div>
+</div>

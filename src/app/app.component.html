@@ -57,10 +57,10 @@
         <th>City</th>
       </tr>
     </thead>
-    <tr *ngFor="let p of people">
-      <td>{{ p.name }}</td>
-      <td>{{ p.age }}</td>
-      <td>{{ p.city }}</td>
+    <tr *ngFor="let person of people">
+      <td>{{ person.name }}</td>
+      <td>{{ person.age }}</td>
+      <td>{{ person.city }}</td>
     </tr>
   </table>
 
@@ -74,5 +74,6 @@
   <hr />
   <h2>2 way data binding</h2>
   <input [(ngModel)]="name" placeholder="Enter your name" />
+
   <p>Hello, {{ name }}!</p>
 </div>

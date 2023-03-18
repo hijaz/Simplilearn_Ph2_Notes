@@ -1,0 +1,18 @@
+<h3>Date Pipe</h3>
+<p>Today is {{ today | date : "fullDate" }}</p>
+<h3>Uppercase</h3>
+<p>{{ name | uppercase }}</p>
+<h3>Lowercase</h3>
+<p>{{ name | lowercase }}</p>
+<h3>Currency</h3>
+<p>{{ amount | currency : "INR" : "symbol" }}</p>
+<h3>Decimal</h3>
+<p>{{ decimal | number : "1.2-6" }}</p>
+<h3>Percent</h3>
+<p>{{ pi | percent }}</p>
+<h3>Async Pipe</h3>
+<p>data: {{ data | async }}</p>
+<h3>Pipe Chaining</h3>
+<p>{{ today | date : "fullDate" | lowercase }}</p>
+<h3>Custom Pipe: Reverse</h3>
+<p>{{ name | reverse }}</p>

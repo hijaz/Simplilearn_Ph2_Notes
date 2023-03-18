@@ -11,6 +11,8 @@ import { UnlessDirective } from './directives/unless.directive';
 import { HighlightDirective } from './directives/highlight.directive';
 import { LifecycleDemoParentComponent } from './components/parent-lifecycle-demo/parent-lifecycle-demo.component';
 import { LifecycleChildDemoComponent } from './components/lifecycle-demo/lifecycle-demo.component';
+import { PipesDemoComponent } from './components/pipes-demo/pipes-demo.component';
+import { ReversePipe } from './pipes/reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { LifecycleChildDemoComponent } from './components/lifecycle-demo/lifecyc
     HighlightDirective,
     LifecycleDemoParentComponent,
     LifecycleChildDemoComponent,
+    PipesDemoComponent,
+    ReversePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

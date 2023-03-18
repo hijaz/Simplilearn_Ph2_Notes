@@ -83,4 +83,54 @@
   <hr />
   <h2 appHighlight>Custom Attribute Directive</h2>
   <div appHighlight>Should highlight on hover</div>
+  <hr />
+  <h2>Component Lifecycle Hooks (instead of Scope)</h2>
+  <app-parent-lifecycle-demo></app-parent-lifecycle-demo>
+  <ul>
+    <li>
+      ngOnChanges: This event is called when a component's input properties
+      change. It allows you to react to changes in data before the view is
+      updated.
+    </li>
+
+    <li>
+      ngOnInit: This event is called after the first ngOnChanges and after the
+      component's constructor. It is used to initialize data and perform any
+      other initialization tasks.
+    </li>
+
+    <li>
+      ngDoCheck: This event is called during every change detection cycle and is
+      used to check for changes that Angular may not have detected.
+    </li>
+
+    <li>
+      ngAfterContentInit: This event is called after the component's content has
+      been initialized. It is used to perform initialization tasks that require
+      access to the component's content.
+    </li>
+
+    <li>
+      ngAfterContentChecked: This event is called after every check of the
+      component's content. It is used to perform any additional content-related
+      tasks.
+    </li>
+
+    <li>
+      ngAfterViewInit: This event is called after the component's view has been
+      initialized. It is used to perform initialization tasks that require
+      access to the component's view.
+    </li>
+
+    <li>
+      ngAfterViewChecked: This event is called after every check of the
+      component's view. It is used to perform any additional view-related tasks.
+    </li>
+
+    <li>
+      ngOnDestroy: This event is called when the component is about to be
+      destroyed. It is used to clean up any resources that the component may
+      have created.
+    </li>
+  </ul>
 </div>

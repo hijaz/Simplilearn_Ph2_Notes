@@ -1,0 +1,17 @@
+<form [formGroup]="myForm" (ngSubmit)="handleSubmit(myForm.value)">
+  <label for="username">Name</label>
+  <input
+    type="text"
+    placeholder="Enter name..."
+    id="username"
+    [formControl]="myForm.controls['username']"
+  />
+  <label for="age">Age</label>
+  <input
+    type="number"
+    placeholder="Enter age..."
+    id="age"
+    [formControl]="myForm.controls['age']"
+  />
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,11 @@
+<form #myForm="ngForm" (ngSubmit)="handleSubmit(myForm.value)">
+  <label for="username">Name</label>
+  <input
+    ngModel
+    type="text"
+    id="username"
+    placeholder="Enter name..."
+    name="username"
+  />
+  <button type="submit">Submit</button>
+</form>

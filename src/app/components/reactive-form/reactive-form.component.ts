@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { startswith123 } from 'src/app/validators/customValidator';
 
 @Component({
   selector: 'app-reactive-form',
@@ -11,7 +12,7 @@ export class ReactiveFormComponent {
 
   constructor(formBuilder: FormBuilder) {
     this.myForm = formBuilder.group({
-      username: ['John Doe', Validators.required],
+      username: ['John Doe', startswith123],
       email: ['', Validators.email],
       age: [0],
     });

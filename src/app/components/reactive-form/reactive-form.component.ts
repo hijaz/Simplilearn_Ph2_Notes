@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
@@ -11,12 +11,16 @@ export class ReactiveFormComponent {
 
   constructor(formBuilder: FormBuilder) {
     this.myForm = formBuilder.group({
-      username: ['John Doe'],
+      username: ['John Doe', Validators.required],
+      email: ['', Validators.email],
       age: [0],
     });
   }
 
   handleSubmit(values: {}) {
-    console.log({ values });
+    if (this.myForm.valid) {
+      //submit data to server
+      console.log({ values });
+    }
   }
 }

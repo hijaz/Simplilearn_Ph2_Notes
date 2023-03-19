@@ -1,10 +1,21 @@
-<form [formGroup]="myForm" (ngSubmit)="handleSubmit(myForm.value)">
+<form
+  [formGroup]="myForm"
+  (ngSubmit)="handleSubmit(myForm.value)"
+  [ngClass]="{ 'form-error': myForm.invalid && myForm.touched }"
+>
   <label for="username">Name</label>
   <input
     type="text"
     placeholder="Enter name..."
     id="username"
     [formControl]="myForm.controls['username']"
+  />
+  <label for="email">Name</label>
+  <input
+    type="text"
+    placeholder="Enter email..."
+    id="email"
+    [formControl]="myForm.controls['email']"
   />
   <label for="age">Age</label>
   <input
@@ -15,3 +26,7 @@
   />
   <button type="submit">Submit</button>
 </form>
+<div *ngIf="!myForm.valid">Form is invalid</div>
+<div *ngIf="myForm.pristine">Form is Pristine</div>
+<div *ngIf="myForm.touched">Form is Touched</div>
+<div *ngIf="myForm.dirty">Form is Dirty</div>

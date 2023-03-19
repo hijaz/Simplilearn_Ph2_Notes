@@ -1,0 +1,9 @@
+<ul>
+  <input type="text" placeholder="Enter new todo..." [(ngModel)]="newTodo" />
+  <button (click)="addNewTodo()">Add</button>
+  <app-todo-list-item
+    *ngFor="let todo of todoList"
+    [todo]="todo"
+    (toggle)="handleTodoToggled($event)"
+  ></app-todo-list-item>
+</ul>

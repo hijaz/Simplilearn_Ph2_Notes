@@ -26,12 +26,13 @@ import {
         'final',
         style({
           backgroundColor: 'blue',
-          transform: 'scale(1.2)',
+          color: 'white',
+          transform: 'scale(2)',
         })
       ),
       transition('initial => final', [
         animate(
-          '5s cubic-bezier(1,1.65,.79,.15)',
+          '5s 1s cubic-bezier(1,1.65,.79,.15)',
           keyframes([
             style({ transform: 'scale(1)', offset: 0 }),
             style({ transform: 'scale(6.2)', offset: 0.25 }),
@@ -41,13 +42,7 @@ import {
         ),
       ]),
       transition('final => initial', [
-        animate(
-          '1s cubic-bezier(1,1.65,.79,.15)'
-          // style({
-          //   transform: 'scale(1)',
-          //   backgroundColor: 'red',
-          // })
-        ),
+        animate('1s cubic-bezier(1,1.65,.79,.15)'),
       ]),
     ]),
   ],

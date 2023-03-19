@@ -15,6 +15,8 @@ import { LifecycleChildDemoComponent } from './components/lifecycle-demo/lifecyc
 import { PipesDemoComponent } from './components/pipes-demo/pipes-demo.component';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { AnimationExampleComponent } from './components/animation-example/animation-example.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TodoListItemComponent } from './components/todo-list-item/todo-list-item.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { AnimationExampleComponent } from './components/animation-example/animat
     PipesDemoComponent,
     ReversePipe,
     AnimationExampleComponent,
+    TodoListComponent,
+    TodoListItemComponent,
   ],
   imports: [
     BrowserModule,

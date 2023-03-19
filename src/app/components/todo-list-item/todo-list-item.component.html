@@ -1,0 +1,6 @@
+<li *ngIf="!todo.completed">
+  <input type="checkbox" [checked]="todo.completed" (change)="onToggle()" />
+  <label>
+    {{ todo.title }}
+  </label>
+</li>

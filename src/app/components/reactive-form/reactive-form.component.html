@@ -26,6 +26,7 @@
   />
   <button type="submit">Submit</button>
 </form>
+<div *ngIf="myForm.valid">Form is Valid</div>
 <div *ngIf="!myForm.valid">Form is invalid</div>
 <div *ngIf="myForm.pristine">Form is Pristine</div>
 <div *ngIf="myForm.touched">Form is Touched</div>

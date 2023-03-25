@@ -19,6 +19,10 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoListItemComponent } from './components/todo-list-item/todo-list-item.component';
 import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,10 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
     TodoListItemComponent,
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
+    AboutComponent,
+    ContactComponent,
+    NavigationComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +54,6 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
     ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [NavigationComponent],
 })
 export class AppModule {}

@@ -27,6 +27,7 @@ import { ProductComponent } from './components/product/product.component';
 import { Error404Component } from './components/error404/error404.component';
 import { MouseCoordinatesComponent } from './components/mouse-coordinates/mouse-coordinates.component';
 import { RandomCatComponent } from './components/random-cat/random-cat.component';
+import { ExampleService } from './services/example.service';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,7 @@ import { RandomCatComponent } from './components/random-cat/random-cat.component
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ExampleService],
   bootstrap: [NavigationComponent],
 })
 export class AppModule {}

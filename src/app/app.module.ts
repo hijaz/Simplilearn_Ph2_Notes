@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,9 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { ProductComponent } from './components/product/product.component';
+import { Error404Component } from './components/error404/error404.component';
+import { MouseCoordinatesComponent } from './components/mouse-coordinates/mouse-coordinates.component';
+import { RandomCatComponent } from './components/random-cat/random-cat.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +49,9 @@ import { ProductComponent } from './components/product/product.component';
     ContactComponent,
     NavigationComponent,
     ProductComponent,
+    Error404Component,
+    MouseCoordinatesComponent,
+    RandomCatComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +59,7 @@ import { ProductComponent } from './components/product/product.component';
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [NavigationComponent],

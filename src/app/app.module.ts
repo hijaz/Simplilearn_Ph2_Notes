@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +28,7 @@ import { Error404Component } from './components/error404/error404.component';
 import { MouseCoordinatesComponent } from './components/mouse-coordinates/mouse-coordinates.component';
 import { RandomCatComponent } from './components/random-cat/random-cat.component';
 import { ExampleService } from './services/example.service';
+import { LoggingInterceptorService } from './services/logging-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,11 @@ import { ExampleService } from './services/example.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ExampleService],
+  providers: [ExampleService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: LoggingInterceptorService,
+    multi: true
+  }],
   bootstrap: [NavigationComponent],
 })
 export class AppModule {}

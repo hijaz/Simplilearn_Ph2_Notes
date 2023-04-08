@@ -19,5 +19,6 @@ describe('RandomCatComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+
   });
 });

@@ -16,6 +16,7 @@ export class RandomCatComponent {
   catUrl: string = '';
   catUrlPath: string = '';
 
+
   constructor(private http: HttpClient, private exampleService: ExampleService){
     this.catUrlPath = exampleService.getData();
   }
